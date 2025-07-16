@@ -23,7 +23,7 @@ logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Azure OpenAI credentials & endpoints (hard-coded)
-AZURE_OPENAI_API_KEY="dc6ccd6606544f64a6321dfd11abda27"
+AZURE_OPENAI_API_KEY="your api key"
 AZURE_OPENAI_CHAT_DEPLOYMENT_NAME="AI-GPT4o-MINI-Model"
 AZURE_OPENAI_CHAT_DEPLOYMENT_VERSION="2024-08-01-preview"
 AZURE_OPENAI_CHAT_ENDPOINT="https://tml-az-dev-ca-aac-openai.openai.azure.com/"
@@ -67,7 +67,7 @@ def embed_all_documents(doc_dir: str, output_index_dir: str):
     index = VectorStoreIndex.from_documents(docs)
     index.set_index_id("vector_index")
     index.storage_context.persist(str(out_dir))
-    logger.info(f"✅ Embedded and saved index to {out_dir}")
+    logger.info(f" Embedded and saved index to {out_dir}")
 
 # Extract and embed DOCX tables
 def extract_and_embed_tables_from_docx(docx_path: str, output_index_dir: str):
@@ -100,7 +100,7 @@ def extract_and_embed_tables_from_docx(docx_path: str, output_index_dir: str):
                 index.insert(doc)
             logger.info(f"Inserted table #{tbl_idx}")
         index.storage_context.persist(str(output_index_dir))
-        logger.info("✅ Embedded DOCX tables into index")
+        logger.info(" Embedded DOCX tables into index")
     finally:
         shutil.rmtree(temp_dir, ignore_errors=True)
 
@@ -135,7 +135,7 @@ def embed_json_file(json_path: str, output_index_dir: str):
     for doc in docs:
         index.insert(doc)
     index.storage_context.persist(str(output_index_dir))
-    logger.info(f"✅ Embedded JSON from {json_path.name} into index.")
+    logger.info(f" Embedded JSON from {json_path.name} into index.")
     os.unlink(tmp_file.name)
 
 # Main
