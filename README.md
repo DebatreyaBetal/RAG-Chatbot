@@ -1,2 +1,2 @@
 # RAG-Chatbot
-AI policy assistants for domains like HR, Supply Chain, and Production
+ Developed enterprise policy assistants using Retrieval-Augmented Generation (RAG), featuring multimodal chatbots for HR, Supply Chain, and Production domains. Employees and stakeholders can instantly get accurate answers to queries about company policies—covering areas such as HR (relocation, travel, leave), supply chain management (procurement, logistics, inventory), and production processes (safety manuals, protocols, scheduling)—without the need to go through lengthy documents or wait for expert responses.
