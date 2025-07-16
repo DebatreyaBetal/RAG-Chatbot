@@ -14,7 +14,7 @@ from llama_index.embeddings.azure_openai import AzureOpenAIEmbedding
 logging.basicConfig(level=logging.INFO)
 
 # Replace the placeholder strings below with your actual values:
-AZURE_OPENAI_API_KEY="dc6ccd6606544f64a6321dfd11abda27"
+AZURE_OPENAI_API_KEY="your api key"
 
 AZURE_OPENAI_CHAT_DEPLOYMENT_NAME="AI-GPT4o-MINI-Model"
 
